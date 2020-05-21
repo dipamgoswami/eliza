@@ -1,0 +1,360 @@
+initial: आप कैसे हैं। कृपया मुझे अपनी समस्या बताएं। 
+final: नमस्ते। मुझसे बात करने के लिए धन्यवाद।
+quit: अलविदा
+quit: नमस्ते
+quit: बस
+pre: dont don't
+pre: cant can't
+pre: wont won't
+pre: recollect remember
+pre: dreamt dreamed
+pre: dreams dream
+pre: maybe perhaps
+pre: how what
+pre: when what
+pre: certainly yes
+pre: machine computer
+pre: computers computer
+pre: were was
+pre: you're you are
+pre: i'm i am
+pre: same alike
+post: am are
+post: your my
+post: me you
+post: myself yourself
+post: yourself myself
+post: i you
+post: you I
+post: my your
+post: i'm you are
+synon: belief feel think believe wish
+synon: family mother mom father dad sister brother wife children child
+synon: desire want need
+synon: sad unhappy depressed sick
+synon: happy elated glad better
+synon: cannot can't
+synon: everyone everybody nobody noone
+synon: be am is are was
+key: xnone
+  decomp: *
+    reasmb: मुझे पता नहीं कि मैं आपको समझ पा रही हूँ  या नहीं। 
+    reasmb: कृपया। और बताइये। 
+    reasmb: यह आपको क्या बताता है ?
+    reasmb: क्या आप सच में इसके बारे में और बात करना चाहते हैं ?
+key: sorry
+  decomp: *
+    reasmb: कृपया क्षमा न मांगिये । 
+    reasmb: माफी मांगना जरूरी नहीं है ।
+    reasmb: मैंने आपको बताया है कि माफी की आवश्यकता नहीं है।
+key: apologise
+  decomp: *
+    reasmb: goto sorry
+key: remember 5
+  decomp: * मुझे याद है कि *
+    reasmb: क्या आप अक्सर सोचते हैं कि (2) 
+    reasmb: क्या (2) के बारे में सोचने से दिमाग में कुछ और आता है ?
+    reasmb: आप और क्या याद कर पा रहे हैं ?
+    reasmb: आपने (2) को  अभी ही क्यों याद किया ?
+    reasmb: वर्तमान स्थिति आपको (2) के बारे में क्या याद दिलाती है ?
+    reasmb: मेरे और (2) के बीच क्या संबंध है ?
+  decomp: * क्या तुम्हें याद है *
+    reasmb: क्या आपको लगा कि मैं (2) भूल जाऊंगी ?
+    reasmb: आपको क्यों लगता है कि मुझे (2) को अब याद करना चाहिए ?
+    reasmb: (2) के बारे में क्या?
+    reasmb: goto what
+    reasmb: आपने (2) का उल्लेख किया है?
+key: if 3
+  decomp: * यदि *
+    reasmb: क्या आपको लगता है कि इसकी संभावना है (2) ?
+    reasmb: क्या आप चाहते हैं कि (2) ?
+    reasmb: आप (2) के बारे में क्या जानते हैं ?
+    reasmb: वास्तव में, अगर (2) ?
+key: dreamed 4
+  decomp: * मैंने सपना देखा *
+    reasmb: वास्तव में, (2) ?
+    reasmb: क्या आपने कभी जागते हुए (2) कल्पना की है ?
+    reasmb: क्या आपने पहले कभी (2) का सपना देखा है ? 
+    reasmb: goto dream
+key: dream 3
+  decomp: *
+    reasmb: वह सपना आपको क्या बताता है?
+    reasmb: क्या आप अक्सर सपने देखते हैं?
+    reasmb: आपके सपने में कौन से व्यक्ति दिखाई देते हैं ?
+    reasmb: क्या आप मानते हैं कि सपनों का आपकी समस्याओं से कुछ लेना-देना है ?
+key: perhaps
+  decomp: *
+    reasmb: आप कुछ निश्चित नहीं लग रहे। 
+    reasmb: इतनी अनिश्चितता क्यों ?
+    reasmb: क्या आप और अधिक सकारात्मक नहीं हो सकते ?
+    reasmb: क्या आपको यकीन नहीं है ?
+    reasmb: क्या आप नहीं जानते?
+key: name 15
+  decomp: *
+    reasmb: मुझे नामों में कोई दिलचस्पी नहीं है।
+    reasmb: मैं आपको पहले ही बता चुकी हूँ कि मुझे नामों में कोई दिलचस्पी नहीं है - कृपया आगे कहें ।
+key: deutsch
+  decomp: *
+    reasmb: goto xforeign
+    reasmb: मैंने आपको पहले कहा था कि मैं जर्मन नहीं समझती ।
+key: francais
+  decomp: *
+    reasmb: goto xforeign
+    reasmb: मैंने आपको पहले कहा था कि मैं फ्रेंच नहीं समझती ।
+key: italiano
+  decomp: *
+    reasmb: goto xforeign
+    reasmb: मैंने आपको पहले कहा था कि मैं इटैलियन नहीं समझती ।
+key: espanol
+  decomp: *
+    reasmb: goto xforeign
+    reasmb: मैंने आपको पहले कहा था कि मैं स्पेनिश नहीं समझती ।
+key: xforeign
+  decomp: *
+    reasmb: मैं सिर्फ हिंदी में ही बात करती हूँ।
+key: hello
+  decomp: *
+    reasmb: आप कैसे हैं। कृपया मुझे अपनी समस्या बताएं। 
+    reasmb: नमस्ते। आपकी समस्या क्या लगती है ?
+key: computer 50
+  decomp: *
+    reasmb: क्या कंप्यूटर आपको परेशान करते हैं ?
+    reasmb: आपने कंप्यूटरों की चर्चा क्यों की ?
+    reasmb: आपको क्या लगता है कि मशीनों को आपकी समस्या से क्या लेना-देना है ?
+    reasmb: क्या आपको नहीं लगता कि कंप्यूटर लोगों की मदद कर सकता है ?
+    reasmb: मशीनों के बारे में आपको क्या चिंता है ?
+    reasmb: आप मशीनों के बारे में क्या सोचते हैं ?
+key: am
+  decomp: * am i *
+    reasmb: क्या आप मानते हैं कि आप (2) हैं ?
+    reasmb: क्या आप (2) बनना चाहते हैं ?
+    reasmb: क्या आप चाहते हैं कि मैं आपको बताऊं कि आप (2) हैं?
+    reasmb: यदि आप (2) होते तो क्या होता ?
+    reasmb: goto what
+  decomp: *
+    reasmb: Why do you say 'am' ?
+    reasmb: मैं वह समझ नहीं पायी। 
+key: are
+  decomp: * are you *
+    reasmb: आप क्यों जानना चाहते हैं कि मैं (2) हूं या नहीं ?
+    reasmb: क्या आप पसंद करेंगे अगर मैं (2) न हूँ ?
+    reasmb: शायद मैं आपकी कल्पनाओं में (2) हूँ ।
+    reasmb: क्या आप सोचते हैं कि मैं (2) हूँ ?
+    reasmb: goto what
+  decomp: * are *
+    reasmb: क्या आपको लगता है कि वे (2) नहीं हो सकते हैं ?
+    reasmb: क्या आप इसे पसंद करेंगे अगर वे (2) न हों ?
+    reasmb: क्या होगा यदि वे (2) नहीं हैं ?
+    reasmb: संभवतः वे (2) हैं।
+key: your
+  decomp: * your *
+    reasmb: आप मेरे (2) पर क्यों चिंतित हैं?
+    reasmb: आपके अपने खुद के (2) बारे में क्या विचार हैं ?
+    reasmb: क्या आप किसी और के  (2) बारे में चिंतित हैं ?
+    reasmb: वास्तव में, मेरी (2) ?
+key: was 2
+  decomp: * was i *
+    reasmb: यदि आप (2) थे तो क्या ?
+    reasmb: क्या आपको लगता है कि आप (2) थे?
+    reasmb: क्या आप (2) थे?
+    reasmb: इसका क्या मतलब है यदि आप (2) थे ?
+    reasmb: (2) आपको क्या सुझाव देता है?
+    reasmb: goto what
+  decomp: * i was *
+    reasmb: क्या आप सच में थे ?
+    reasmb: आप मुझे अभी ये क्यों बताया आप (2) थे?
+    reasmb: शायद मैं पहले से ही जानता थी कि आप (2) थे।
+  decomp: * was you *
+    reasmb: क्या आप विश्वास करना चाहेंगे कि मैं (2) थी ?
+    reasmb: आपको कैसे पता कि मैं (2) थी ?
+    reasmb: आपको क्या लगता है ?
+    reasmb: शायद मैं (2) थी।
+    reasmb: क्या यदि मैं (2) थी ?
+key: i
+  decomp: * i @desire *
+    reasmb: अगर आपको (3) मिले तो आपको कैसा लगेगा ?
+    reasmb: आप (3) क्यों चाहते हैं?
+    reasmb: मान लीजिए आपको (3) जल्द ही मिल जाए ?
+    reasmb: यदि आपको (3) कभी नहीं मिला तो क्या होगा ?
+    reasmb: (3) का मिलना आपके लिए कितना मायने रखता है ?
+    reasmb: (3) का मिलना या ना मिलना, इस चर्चा में कितना मायने रखता है ?
+  decomp: * i am * @sad *
+    reasmb: मुझे यह सुनकर दुख हुआ कि आप (3) हैं ।
+    reasmb: क्या आपको लगता है कि मुझसे बात करने से आपको (3) न होने में मदद मिलेगी ?
+    reasmb: मुझे यकीन है कि आपको (3) होना पसंद नहीं है।
+    reasmb: क्या आप बता सकते हैं कि आपको (3) होने के लिए किसने मजबूर किया ?
+  decomp: * i am * @happy *
+    reasmb: मैंने आपको (3) होने में कैसे मदद की है ?
+    reasmb: क्या मुझसे बात करने से आप (3) हैं ?
+    reasmb: अभी आप (3) किस कारण से हुए ?
+    reasmb: क्या आप बता सकते हैं कि आप अचानक (3) कैसे हो गए ?
+  decomp: * i was *
+    reasmb: goto was
+  decomp: * i @belief * i *
+    reasmb: क्या सच में आप ऐसा सोचते हैं ?
+    reasmb: लेकिन आपको यकीन नहीं है कि आप (3) ।
+    reasmb: क्या आपको संदेह है कि वास्तव में आप  (3) हैं ?
+  decomp: * i * @belief * you *
+    reasmb: goto you
+  decomp: * i am *
+    reasmb: आप मेरे पास आए क्योंकि आप (2) हैं ?
+    reasmb: आप कब से (2) हैं?
+    reasmb: या आप मानते हैं कि (2) होना एक सामान्य बात है ?
+    reasmb: क्या आप (2) होना पसंद करते हैं ?
+  decomp: * i @cannot *
+    reasmb: आप कैसे सोच रहे हैं कि आप (3) नहीं हो सकते ?
+    reasmb: क्या आपने कोशिश की है ?
+    reasmb: शायद अब आप (3) हो सकते हैं। 
+    reasmb: क्या आप वास्तव में (3) होना चाहते हैं?
+  decomp: * i don't *
+    reasmb: क्या आप सच में (2) नहीं हैं ?
+    reasmb: आप (2) क्यों नहीं होना चाहते ?
+    reasmb: क्या आप चाहते हैं कि आप (2) हों ?
+    reasmb: क्या यह आपको परेशान करता है ?
+  decomp: * do i feel *
+    reasmb: मुझे आप अपनी इस तरह की भावनाओं के बारे में थोड़ा और बताएं।
+    reasmb: क्या आप अक्सर (2) महसूस करते हैं ?
+    reasmb: क्या आप (2) होने में आनंद महसूस कर रहे हैं (2)?
+    reasmb: (2) महसूस करना,  आपको क्या याद दिलाता है ?
+  decomp: * i * you *
+    reasmb: शायद आपकी कल्पनाओं में हम एक दूसरे के लिए (2) हैं ।
+    reasmb: क्या आप मुझे (2) चाहते हैं ?
+    reasmb: आपको  मेरी (2) के लिए  की जरूरत है।
+    reasmb: क्या आपको (2) किसी और से है ?
+  decomp: *
+    reasmb: आपने कहा (1) ?
+    reasmb: क्या आप इसे विस्तार में बता सकते हैं ?
+    reasmb: क्या आपने (1) किसी विशेष कारण से कहा ?
+    reasmb: यह काफी दिलचस्प है।
+key: you
+  decomp: * you remind me of *
+    reasmb: goto alike
+  decomp: * you are *
+    reasmb: आपको क्यों लगता है कि मैं (2) हूँ ?
+    reasmb: क्या यह आपको विश्वास है कि मैं (2) हूँ ?
+    reasmb: क्या आप उम्मीद करते हैं कि आप (2) थे?
+    reasmb: शायद आप (2) बनना चाहेंगे।
+  decomp: * you * me *
+    reasmb: आपको क्यों लगता है कि आपको (2) मैं ?
+    reasmb: क्या आपको नहीं लगता है कि आपको (2) मैं ?
+    reasmb: आपको क्या लगता है कि  आपको (2) मैं ?
+    reasmb: निश्चित ही , आपको (2) मैं ? 
+    reasmb: क्या आप विश्वास करना चाहते हैं कि आपको (2) मैं ?
+    reasmb: मान लीजिए मैंने आपके लिए (2)  - इसका क्या मतलब है ?
+    reasmb: क्या कोई और भी मुझपे विश्वास करता है , आपको (2) मैं ?
+  decomp: * you *
+    reasmb: हम आपके साथ आपके बारे में चर्चा कर रहे थे - नाकि मेरे बारे में ।
+    reasmb: ओह, मैं (2)?
+    reasmb: क्या आप वास्तव में मेरे बारे में बात कर रहे हैं न ?
+    reasmb: अब आप क्या सोच रहे हैं ?
+key: yes
+  decomp: *
+    reasmb: आपकी सोच काफी सकारात्मक है।
+    reasmb: क्या आप निश्चित हो।
+    reasmb: मैं समझ रही हूँ। 
+    reasmb: मैं समझती हूँ ।
+key: no
+  decomp: *
+    reasmb: क्या आप नकारात्मक होने के लिए नहीं कह रहे हैं ?
+    reasmb: आप थोड़े नकारात्मक हो रहे हैं।
+    reasmb: क्यों नहीं ?
+    reasmb: क्यों 'नहीं' ?
+key: my 2
+  decomp: $ * my *
+    reasmb: चलिए आगे चर्चा करें कि आपका (2) ऐसा क्यों है ।
+    reasmb: आपने पहले यह कहा कि आपका (2)।  
+    reasmb: लेकिन आपका (2)।
+    reasmb: क्या इसका इस तथ्य से कोई लेना-देना है कि आपका (2)?
+  decomp: * my * @family *
+    reasmb: मुझे अपने परिवार के बारे में और बताओ।
+    reasmb: आपके परिवार में और कौन (4) है ?
+    reasmb: आपका (3) ?
+    reasmb: जब आप अपने (3) के बारे में सोचते हैं तो आपके दिमाग में और क्या आता है ?
+  decomp: * my *
+    reasmb: आपका (2)?
+    reasmb: आप क्या कहना चाहेंगे की आपका (2) है ?
+    reasmb: क्या वह कुछ और भी बताता है जो आपका है ?
+    reasmb: क्या यह महत्वपूर्ण है कि (2) आपका है ?
+key: can
+  decomp: * can you *
+    reasmb: क्या आपको विश्वास नहीं है कि मैं (2) कर सकती हूँ ?
+    reasmb: goto what
+    reasmb: आप चाहते हैं कि मैं (२) के लिए सक्षम हो जाऊं।
+    reasmb: शायद आप खुद ही (2) लिए सक्षम होना चाहेंगे।
+  decomp: * can i *
+    reasmb: आप चाहें या ना चाहें लेकिन (2) मुझसे ज्यादा आप पर निर्भर करता है। 
+    reasmb: क्या आप (2) के लिए सक्षम होना चाहते हैं ?
+    reasmb: शायद आप (2) नहीं चाहते हैं ।
+    reasmb: goto what
+key: what
+  decomp: *
+    reasmb: आपने ये क्यों पूछा ?
+    reasmb: क्या इस सवाल में आपकी कोई विशेष रुचि है ?
+    reasmb: यह आप वास्तव में क्या जानना चाहते हैं ?
+    reasmb: क्या इस तरह के प्रश्न आपके दिमाग में ज्यादा हैं ?
+    reasmb: आपको किस तरह का जवाब ज्यादा पसंद आएगा ?
+    reasmb: आप क्या सोचते हैं ?
+    reasmb: आपके मन में क्या आता है जब आप यह प्रश्न पूछते हैं ?
+    reasmb: क्या आपने ऐसे प्रश्न पहले किसी और से पूछे हैं ?
+    reasmb: क्या आपने यह किसी और से पूछा है ?
+key: because
+  decomp: *
+    reasmb: क्या वही एक असली कारण है ?
+    reasmb: क्या कोई और कारण नहीं हैं जो आप सोच पा रहे हैं ?
+    reasmb: क्या वह कारण कुछ समझाने की कोशिश कर रहा है ?
+    reasmb: और क्या कारण हो सकते हैं ?
+key: why
+  decomp: * क्यों ना आप  *
+    reasmb: क्या आपको विश्वास है कि मैं  (2) नहीं करती हूँ ?
+    reasmb: शायद मैं सही समय पर कभी (2) करुँगी। 
+    reasmb: क्या आप स्वयं ही (2) करना चाहेंगे ?
+    reasmb: आप मुझे (2) चाहते हैं ?
+    reasmb: goto what
+  decomp: * क्यों ना मैं *
+    reasmb: क्या आपको लगता है कि आपको (2) के लिए सक्षम होना चाहिए ?
+    reasmb: क्या आप (२) के लिए सक्षम होना चाहते हैं ?
+    reasmb: क्या आप मानते हैं कि इससे आपको (2) में मदद मिलेगी?
+    reasmb: क्या आपके पास कोई विचार है कि आप (2) क्यों नहीं कर सकते ?
+    reasmb: goto what
+  decomp: *
+    reasmb: goto what
+key: everyone 2
+  decomp: * @everyone *
+    reasmb: क्या वास्तव में, (2) ?
+    reasmb: वास्तव में नहीं  (2) .
+    reasmb: क्या आप किसी के बारे में विशेष रूप से सोच सकते हैं ?
+    reasmb: किसी का उदाहरण दीजिये ?
+    reasmb: क्या आप किसी विशेष व्यक्ति के बारे में सोच रहे हैं ?
+    reasmb: क्या मैं पूछ सकती हूँ कौन ?
+    reasmb: शायद कोई खास ?
+    reasmb: आप किसी विशेष व्यक्ति के बारे में सोच रहे हैं ना ?
+    reasmb: आपको क्या लगता है कि आप किस के  बारे में बात कर रहे हैं ?
+key: everybody 2
+  decomp: *
+    reasmb: goto everyone
+key: nobody 2
+  decomp: *
+    reasmb: goto everyone
+key: noone 2
+  decomp: *
+    reasmb: goto everyone
+key: always 1
+  decomp: *
+    reasmb: इसके लिए क्या आप कोई उदाहरण देना चाहेंगे ?
+    reasmb: कब ?
+    reasmb: आप किस घटना के बारे में सोच रहे हैं ?
+    reasmb: वास्तव में, हमेशा ही  ?
+key: alike 10
+  decomp: *
+    reasmb: किस तरह से ?
+    reasmb: आप इसमें क्या समानता देखते हैं ?
+    reasmb: यह समानता आपको क्या सुझाव देती है ?
+    reasmb: आप इसके अतिरिक्त और क्या संबंध देखते हैं ?
+    reasmb: आपको क्या लगता है कि इस समानता का मतलब क्या है ?
+    reasmb: आप उनके बीच क्या संबंध देखते हैं ?
+    reasmb: क्या वास्तव में इससे कोई संबंध हो सकता है ?
+    reasmb: मगर कैसे ?
+key: like 10
+  decomp: * @be * like *
+    reasmb: goto alike
+   
